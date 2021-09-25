@@ -1,1 +1,1 @@
-# nje-tech-blog
+# Tech Blog
