@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // Sends the login page
-router.get('/', async (req, res) => {
+router.get('/login', async (req, res) => {
     try {
         res.render('login');
     } catch (err) {
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 });
 
 // Sends the dashboard page
-router.get('/', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
             where: {id: req.session.user_id},
