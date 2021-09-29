@@ -7,7 +7,7 @@ const createPost = async (event) => {
         user_id: null
     };
 
-    const fetchPost = await fetch('/api/posts', {
+    const fetchPost = await fetch('/api/post', {
         method: 'POST',
         body: JSON.stringify(post),
         headers: { 'Content-Type': 'application/json' }

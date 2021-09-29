@@ -1,10 +1,9 @@
 const deletePost = async (event) => {
+    // Gets the ID from the path param
     const pathParams = window.location.pathname + window.location.search;
-    const pathArray = pathParams.split('/');
-    const postId = pathArray[2];
-    console.log(postId);
 
-    const postDelete = await fetch(`/api/posts/${postId}`, {
+    // Fetch request to database using 
+    const postDelete = await fetch(`/api/${pathParams}`, {
         method: 'DELETE'
     });
 
