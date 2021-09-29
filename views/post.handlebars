@@ -8,3 +8,12 @@
         <p>{{post.description}}</p>
     </div>
 </div>
+
+{{#if logged_in}}
+{{!-- Comment Button --}}
+{{/if}}
+
+{{#if post.user_id === user_id}}
+<button class="btn btn-primary" id="update-button">Update</button>
+<button class="btn btn-primary" id="delete-button">Delete</button>
+{{/if}}

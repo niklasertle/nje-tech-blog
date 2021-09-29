@@ -36,19 +36,23 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
+// Sends a singular post page
 router.get('/post/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findOne({
             where: {id: req.params.id},
             include: User, Comment
         });
-        console.log(postData);
         const post = postData.get({plain:true});
-        console.log(post);
         res.render('post', {post, logged_in: req.session.logged_in, user_id: req.session.user_id})
     } catch (err) {
         res.status(500).json(err);
     }
+});
+
+// Sends create a post page
+router.get('/create', withAuth, async (req, res) => {
+    res.render('createPost', {logged_in: req.session.logged_in, user_id: req.session.user_id});
 })
 
 module.exports = router;
