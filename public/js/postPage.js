@@ -29,7 +29,8 @@ const createComment = async (event) => {
     const comment = {
         title: document.querySelector('#comment-title').value.trim(),
         description: document.querySelector('#comment-description').value.trim(),
-        post_id: postId
+        post_id: postId,
+        user_id: null
     };
 
     const addComment = await fetch('/api/comment', {

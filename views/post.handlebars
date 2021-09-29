@@ -18,6 +18,19 @@
 <button class="btn btn-primary" id="delete-button">Delete</button>
 {{/if}}
 
+{{#each comments as |comment|}}
+<div>
+    <div>
+        <h2>{{title}}</h2>
+        <p>By: {{user.name}}</p>
+        <p>On: {{format_date createdAt}}</p>
+    </div>
+    <div>
+        <p>{{description}}</p>
+    </div>
+</div>
+{{/each}}
+
 <div class='hide comment'>
     <h2>Add your comment</h2>
     <form class="form comment-form">
