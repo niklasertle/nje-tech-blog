@@ -70,4 +70,19 @@ router.get("/create", withAuth, async (req, res) => {
   });
 });
 
+router.get("/edit/:id", withAuth, async (req, res) => {
+  const postData = await Post.findOne({
+    where: { id: req.params.id },
+    include: User,
+  });
+
+  const post = postData.get({ plain: true });
+
+  res.render("editPost", {
+    post,
+    logged_in: req.session.logged_in,
+    user_id: req.session.user_id,
+  });
+});
+
 module.exports = router;

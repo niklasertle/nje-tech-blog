@@ -4,8 +4,8 @@ module.exports = {
           new Date(date).getFullYear()
         }`;
       },
-    if_equals: (userId, postId) => {
-      if (userId == postId) {
+    if_equals: (userId, postUserId) => {
+      if (userId == postUserId) {
         return true;
       } else {
         return false;

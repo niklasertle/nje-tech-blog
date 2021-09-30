@@ -13,7 +13,7 @@ const createUser = async (event) => {
         headers: { 'Content-Type': 'application/json' }
     });
 
-    if (createUser.ok) {
+    if (fetchUser.ok) {
         location.replace('/')
     } else {
         alert('Failed to create user')

@@ -44,9 +44,17 @@ const createComment = async (event) => {
     } else {
         alert('Failed to create a new comment')
     }
+};
+
+const updatePost = async (event) => {
+    const pathParams = window.location.pathname + window.location.search;
+    const pathArry = pathParams.split('/');
+    const postId = pathArry[2];
+
+    location.replace(`/edit/${postId}`)
 }
 
 document.querySelector('#delete-button').addEventListener('click', deletePost);
-//document.querySelector('#update-button').addEventListener('click', updatePost);
+document.querySelector('#update-button').addEventListener('click', updatePost);
 document.querySelector('#comment-button').addEventListener('click', showComment);
 document.querySelector('.comment-form').addEventListener('submit', createComment);
