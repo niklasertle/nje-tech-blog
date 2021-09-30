@@ -17,6 +17,9 @@ const sess = {
   cookie: {},
   resave: false,
   saveUninitialized: true,
+  cookie: {
+    expires: 300000
+  },
   store: new SequelizeStore({
     db: sequelize
   })
