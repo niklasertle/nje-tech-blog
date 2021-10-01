@@ -1,3 +1,80 @@
+body {
+    background-color: grey;
+    font-family: 'Lora', serif;
+}
+
+header {
+    background-color: aliceblue;
+    border-bottom: 3px solid black;
+}
+
+h1 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 52px;
+    margin-left: 5%;
+    color: black;
+}
+
+h2 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 32px;
+    margin-left: 5%;
+    color: navy;
+}
+
+#nav-link, #logout {
+    margin-left: 4%;
+    background-color: lightblue;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.blog-post {
+    margin-bottom: 1%;
+    border: 2px solid black;
+}
+
+#blog-title {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px dashed black;
+    color: blue;
+}
+
+#blog-title a {
+    color: black;
+}
+
+#blog-description {
+    color: white;
+    padding: 5px
+}
+
+#buttons {
+   padding-bottom: 10px;
+}
+
+#form-page {
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid black;
+    width: 30%
+}
+
+.form-group {
+    padding: 1%;
+}
+
+#form-description input{
+    width: 70%;
+}
+
 .hide {
     display: none;
 }
