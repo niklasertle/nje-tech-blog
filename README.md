@@ -33,7 +33,7 @@ When ready use **'npm start'** into the command line to run.
 ## Links
 
 ![Walkthrough Video](./assets/website-img.JPG)<br>
-[Walkthrough Video]() <br>
+[Walkthrough Video](https://www.youtube.com/watch?v=-hmA0-w6QF0) <br>
 [Deployed App](https://aqueous-taiga-49039.herokuapp.com/) <br>
 [GitHub](https://github.com/niklasertle/nje-tech-blog)
 
