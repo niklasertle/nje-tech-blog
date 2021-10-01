@@ -48,4 +48,8 @@
     </form>
 </div>
 
-<script src="/js/postPage.js"></script>
+<script src="/js/commentPost.js"></script>
+
+{{#if (if_equals post.user_id user_id)}}
+<script src="/js/updateDelete.js"></script>
+{{/if}}
